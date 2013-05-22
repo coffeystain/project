@@ -1,10 +1,20 @@
 <?php
 
 
-
 # Load bootstrap to apply configuration
 include("config/bootstrap.php");
 
+//include libraries
+include(APP_MODEL . "/auth/auth_lib.php");
+
+# Start Session
+session_start();
+
+#Check if user is auth
+if (!$_SESSION["username"] && $_GET["q"] != "auth" && $_GET["a"] = "process" ) {
+    $_GET["q"] = "auth";
+    $_GET["a"] = "login";
+}
 
 # Route request to desired controller
 switch ($_GET["q"]) {
