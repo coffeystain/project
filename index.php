@@ -6,6 +6,8 @@ include("config/bootstrap.php");
 
 //include libraries
 include(APP_MODEL . "/auth/auth_lib.php");
+include(APP_MODEL . "/prod/prod_lib.php");
+
 
 # Start Session
 session_start();
@@ -27,6 +29,9 @@ switch ($_GET["q"]) {
         include( APP_CONTROLLER . "/authController.php");
         break;
 
+case "prod":
+        include( APP_CONTROLLER . "/prodController.php");
+        break;
 
     default:
         include( APP_CONTROLLER . "/homeController.php");

@@ -24,7 +24,7 @@ define("DEBUG", 0);
 
 
 $dbHost = "localhost";
-$dbName = "dog_proj";
+$dbName = "test";
 $dbUser = "appuser";
 $dbPass = "test1234";
 
